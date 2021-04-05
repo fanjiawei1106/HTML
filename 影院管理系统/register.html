@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>明煌系统注册页面</title>
+    <link rel="shortcut icon" href="image/favicon.ico"/>
+<style>
+.w{
+    width: 1400px;
+    height: 800px;
+}
+header{
+    height: 84px;
+    border-bottom: 2px solid #c81523;
+}
+.logo{
+    margin-top: 18px;
+}
+.registerarea{
+    height: 580px;
+    border: 1px solid #ccc;
+    margin-top: 20px;
+}
+.registerarea h4{
+    height: 42px;
+    border-bottom: 1px solid #ccc;
+    background-color: #ececec;
+    line-height: 42px;
+    padding: 0 10px;
+    font-size: 18px;
+    font-weight: 400;
+}
+.login{
+    float: right;
+    font-size: 14px;
+}
+.login a{
+    color: #c81523;
+}
+.reg_form{
+    width: 700px;
+    background-color: #fff;
+    margin: 50px auto 0;
+}
+.reg_form ul li {
+    margin-bottom: 20px;
+}
+.reg_form ul li label{
+    display: inline-block;
+    width: 88px;
+    text-align: right;
+}
+.reg_form ul li .inp{
+    width: 242px;
+    height: 35px;
+    border: 1px solid #ccc;
+}
+.error{
+    color: #c81523;
+}
+.success{
+    color: green;
+}
+.safe{
+    padding-left: 170px;
+}
+.safe em{
+    padding: 0 12px;
+    color: #fff;
+}
+.ruo{
+    background-color: red;
+}
+.zhong{
+    background-color:orange;
+}
+.qiang{
+    background-color: green;
+}
+.btn{
+    width: 200px;
+    height: 34px;
+    background-color: #c81523;
+    font-size: 14px;
+    color:#fff;
+    margin: 30px 0 0 70px;
+}
+.agree{
+    padding-left: 170px;
+}
+.mod_copyright{
+    text-align: center;
+}
+</style>
+</head>
+<body>
+    <div class="w">
+        <header>
+            <div class="logo">
+                <a href="官方页面.html"><img src="image/1.jpg" width="124px" height="84px"></a>
+            </div>
+        </header>
+        <div class="registerarea">
+            <h4>注册新用户
+                <div class="login">我有账号，去<a href="#">登陆</a></div>
+            </h4>
+            <div class="reg_form">
+                <ul>
+                    <li><label for="">手机号：</label><input type="text" class="inp">
+                        <span class="error"><i class="error"></i>手机号码格式不正确，请从新输入 </span></li>
+                    <li><label for="">姓名  ：</label><input type="text" class="inp">
+                        <span class="success"> </span></li>
+                    <li><label for="">邮箱  ：</label><input type="text" class="inp">
+                        <span class="success"><i class="error"></i>邮箱号码格式正确</span></li>
+                    <li><label for="">验证码：</label><input type="text" class="inp">
+                        <span class="success"><i class="error"></i>请输入验证码 </span></li>
+                    <li><label for="">登录密码：</label><input type="password" class="inp">
+                        <span class="success">密码符号格式</span>
+                    </li>
+                    <li class="safe">安全程度<em class="ruo">弱</em><em class="zhong">中</em><em class="qiang">强</em></li>
+                    <li class="agree"><input type="checkbox" name="" id="">同意协议并注册</li>
+                    <li>
+                        <a href="官方页面.html"><input type="submit" value="完成注册" class="btn" onclick="alert('您已完成注册，即将返回主页')"></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <footer>
+            <div class="mod_copyright">
+                <div class="copyright">
+                    地址：西安市长安区子午大道  邮编：10086 电话：400——8208820
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
