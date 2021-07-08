@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="shortcut icon" href="assets/img/爱心.ico" type="image/png">
+
+        <!--=============== REMIXICONS ===============-->
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+        
+        <!--=============== SWIPER CSS ===============-->
+        <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+
+        <!--=============== CSS ===============-->
+        <link rel="stylesheet" href="assets/css/styles.css">
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <title>酒店入住</title>
+        <style>
+            *{
+    margin:0;
+    padding:0;
+}
+
+body{
+    overflow:none;
+    background: url("https://images.unsplash.com/photo-1465311530779-5241f5a29892?dpr=1&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=") no-repeat center center fixed;
+    background-size: cover;
+}
+
+/*
+    雷电：https://images.unsplash.com/photo-1431440869543-efaf3388c585?dpr=1&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=
+    雪：https://images.unsplash.com/photo-1483119624769-b1a73c256500?dpr=1&auto=format&fit=crop&w=1080&h=724&q=80&cs=tinysrgb&crop=
+    太阳：https://images.unsplash.com/photo-1472752112832-519166b23dfa?dpr=1&auto=format&fit=crop&w=1080&h=720&q=80&cs=tinysrgb&crop=
+    雨：https://images.unsplash.com/photo-1417008914239-59b898b49382?dpr=1&auto=format&fit=crop&w=1080&h=708&q=80&cs=tinysrgb&crop=
+*/
+
+.content{
+    position: absolute;
+    margin-top: 10%;
+    margin-left: 20%;
+    margin-right: 20%;
+    width: 60%;
+
+}
+.degree{
+    text-align: center;
+    color: rgb(255,102,102);
+    font-size: 30px;
+}
+.degree div{
+    display: inline;
+}
+.degree .tmp-kind{
+    margin-left: 10px;
+}
+.degree .tmp-change{
+    margin-left: 30px;
+}
+.wind{
+    text-align: center;
+    color: rgb(255,102,102);
+    font-size: 30px;
+}
+            .bt{
+            border-bottom: 2px solid gray;
+            padding: 5px;
+        }
+        .main img{
+            max-width: 100%;
+        }
+        #bt-1{
+            float: center;;
+        }
+        #bt-2{
+            float:center;
+            text-align: center;
+            line-height:50px ;
+        }
+        .paddtop{
+            padding-top: 5px;
+        }
+        .Room_reservation{
+            width:100%;
+            color:white;/*字体颜色*/
+            background-color:cornflowerblue;/*按钮背景颜色*/
+            border-radius: 3px;/*让按钮变得圆滑一点*/
+            border-width: 0;/*消去按钮丑的边框*/
+            margin: 0;
+            outline: none;/*取消轮廓*/
+            font-family: KaiTi;/*字体设置为楷体*/
+            font-size: 17px;/*设置字体大小*/
+            text-align: center;/*字体居中*/
+            cursor: pointer;/*设置鼠标箭头手势*/
+        }
+        .Room_reservation:hover{/*鼠标移动时的颜色变化*/
+            background-color: rgb(241, 14, 71);
+        }
+        </style>
+    </head>
+    <body>
+        <header class="header" id="header">
+            <nav class="nav container">
+                <a href="#" class="nav__logo">智慧旅游</a>
+
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="#home" class="nav__link active-link">Home</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#room" class="nav__link">Room</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#event" class="nav__link">Events</a>
+                        </li>
+                        <li class="nav_item">
+                            <a href="./index.html" class="nav_link">主页</a>
+                        </li>
+                    </ul>
+
+                    <div class="nav__dark">
+                        <!-- Theme change button -->
+                        <span class="change-theme-name">Dark mode</span>
+                        <i class="ri-moon-line change-theme" id="theme-button"></i>
+                    </div>
+
+                    <i class="ri-close-line nav__close" id="nav-close"></i>
+                </div>
+
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class="ri-function-line"></i>
+                </div>
+            </nav>
+        </header>
+        <main class="main">
+            
+            <!--==================== HOME ====================-->
+            <section class="section-slider height-v">
+                <div id="index12" class="owl-carousel  owl-theme">
+                    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="item">
+                                <div class="carousel-item active" data-interval="1000">
+                                    <img src="./assets/img/Slider-v2.jpg" class="d-block w-100 alt="...">
+                                  </div>
+                                    <div class="carousel-caption ">
+                                        <h1 class="v2">Enjoy a cool summer</h1>
+                                        <p class="p-v2"><span class="line-t"></span>Hotels & Resorts <span class="line-b"></span></p>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+
+            <!--==================== Room ====================-->
+        <section class="Room" id="room"> 
+            <div class="container main">
+                <!--第一行-->
+                <div class="row paddtop">
+                    <div class="card col-md-4">
+                        <div class="thumbnail">
+                            <a href="#"><img src="./assets/img/our-1.jpg" alt=""></a>
+                            <h6>DELUXE KING  ROOM豪华房</h6>
+                            <p>$320/PER NIGHT</p>
+                            <a href="#"><input type="button" value="订购" class="Room_reservation"></a>
+                        </div>
+                    </div>
+                    <div class="card col-md-4">
+                        <div class="thumbnail">
+                            <a href="#"><img src="./assets/img/our-2.jpg" alt=""></a>
+                            <h6>PRESIDENTIAL SUITE总统套房</h6>
+                            <p>$1266/PER NIGHT</p>
+                            <a href="#"><input type="button" value="订购" class="Room_reservation"></a>
+                        </div>
+                    </div>
+                    <div class="card col-md-4">
+                        <div class="thumbnail">
+                            <a href="#"><img src="./assets/img/our-3.jpg" alt=""></a>
+                            <h6>FAMILY ROOM家庭房</h6>
+                            <p>$480/PER NIGHT</p>
+                            <a href="#"><input type="button" value="订购" class="Room_reservation"></a>
+                        </div>
+                    </div>
+                </div>
+                <!--第二行-->
+                <div class="row paddtop">
+                    <div class="card col-md-4">
+                        <div class="thumbnail">
+                            <a href="#"><img src="./assets/img/our-4.jpg" alt=""></a>
+                            <h6>SINGLE ROOM单人房</h6>
+                            <p>$220/PER NIGHT</p>
+                            <a href="#"><input type="button" value="订购" class="Room_reservation"></a>
+                        </div>
+                    </div>
+                    <div class="card col-md-4">
+                        <div class="thumbnail">
+                            <a href="#"><img src="./assets/img/our-5.jpg" alt=""></a>
+                            <h6>DOUBLIE ROOM双人房</h6>
+                            <p>$360/PER NIGHT</p>
+                            <a href="#"><input type="button" value="订购" class="Room_reservation"></a>
+                        </div>
+                    </div>
+                    <div class="card col-md-4">
+                        <div class="thumbnail">
+                            <a href="#"><img src="./assets/img/our-6.jpg" alt=""></a>
+                            <h6>SEAVIEW ROOM海景房</h6>
+                            <p>$880/PER NIGHT</p>
+                            <a href="#"><input type="button" value="订购" class="Room_reservation"></a>
+                        </div>
+                    </div>
+                </div>
+              </div>
+            </section>
+            
+            <!--==================== Event ====================-->
+            <section class="about section" id="event">
+                <div class="about__container container grid">
+                    <div class="about__data">
+                        <h2 class="section__title about__title">娱乐</h2>
+                        <p class="about__description">海陆空潮玩!直升机+深潜+私人游艇出海/摩托艇/海钓+旅拍『180度海景/国际品牌/挂牌五星』+龙虾海鲜盛宴+蜈支洲岛+森林赠海景玻璃栈道（接送机）                        </p>
+                        <a href="#" class="button">赶紧体验</a>
+                    </div>
+
+                    <div class="about__img">
+                        <div class="about__img-overlay">
+                            <img src="assets/img/2.1.jpg" alt="" class="about__img-one">
+                        </div>
+
+                        <div class="about__img-overlay">
+                            <img src="assets/img/2.2.jpg" alt="" class="about__img-two">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+
+        </main>
+        
+        <!--==================== FOOTER ====================-->
+        <footer class="footer section">
+            <div class="container-fluid">
+                <div class="content">
+                    <!-- <img src="http://file.digitaling.com/eImg/uimages/20150902/1441167475585128.gif"> -->
+                    <div class="degree">
+                        <div class="tmp">30</div>
+                        <div class="tmp-kind">°C</div>
+                        <div class="tmp-change"><button class="btn-tmp-change btn btn-primary">Change °C or °F</button></div>
+                    </div>
+                    <div class="wind">北风3级</div>
+        
+                </div>
+            </div>
+            <div class="footer__container container grid">
+                <div class="footer__content grid">
+                    <div class="footer__data">
+                        <h3 class="footer__title">Travel</h3>
+                        <p class="footer__description">Travel you choose the <br> destination, 
+                            we offer you the <br> experience.
+                        </p>
+                        <div>
+                            <a href="https://www.facebook.com/" target="_blank" class="footer__social">
+                                <i class="ri-facebook-box-fill"></i>
+                            </a>
+                            <a href="https://twitter.com/" target="_blank" class="footer__social">
+                                <i class="ri-twitter-fill"></i>
+                            </a>
+                            <a href="https://www.instagram.com/" target="_blank" class="footer__social">
+                                <i class="ri-instagram-fill"></i>
+                            </a>
+                            <a href="https://www.youtube.com/" target="_blank" class="footer__social">
+                                <i class="ri-youtube-fill"></i>
+                            </a>
+                        </div>
+                    </div>
+    
+                    <div class="footer__data">
+                        <h3 class="footer__subtitle">关于</h3>
+                        <ul>
+                            <li class="footer__item">
+                                <a href="" class="footer__link">关于我们</a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="" class="footer__link">特色</a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="" class="footer__link">新点子和博客</a>
+                            </li>
+                        </ul>
+                    </div>
+    
+                    <div class="footer__data">
+                        <h3 class="footer__subtitle">公司</h3>
+                        <ul>
+                            <li class="footer__item">
+                                <a href="" class="footer__link">团队</a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="" class="footer__link">计划定价</a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="" class="footer__link">加入会员</a>
+                            </li>
+                        </ul>
+                    </div>
+    
+                    <div class="footer__data">
+                        <h3 class="footer__subtitle">支持</h3>
+                        <ul>
+                            <li class="footer__item">
+                                <a href="" class="footer__link">常见问题</a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="" class="footer__link">支持中心</a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="" class="footer__link">联系我们</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="footer__rights">
+                    <p class="footer__copy">&#169; 2021 新的心情，带梦出发</p>
+                    <div class="footer__terms">
+                        <a href="#" class="footer__terms-link">条款和协议</a>
+                        <a href="#" class="footer__terms-link">隐私政策</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+         <!--========== SCROLL UP ==========-->
+        <a href="#" class="scrollup" id="scroll-up">
+            <i class="ri-arrow-up-line scrollup__icon"></i>
+        </a>
+        <script src="assets/js/scrollreveal.min.js"></script>
+        <script src="assets/js/swiper-bundle.min.js"></script>
+        <script src="assets/js/main.js"></script>
+        
+<script src="assets/js/jquery-3.6.0.min.js"></script>
+<script src="assets/js/bootstrap.js"></script>
+<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script src="./assets/js/index.js"></script>
+    </body>
+</html>

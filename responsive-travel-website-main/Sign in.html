@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <meta charset="UTF-8">
+    <title>登录界面</title>
+    <style>
+        html,body{
+            height: 100%;
+        }
+        body{
+            background: #006666;
+        }
+        h1{
+            color: #FFF;
+            text-align: center;
+        }
+        .container{
+            margin: 100px auto;
+            width: 30%;
+        }
+        form{
+            background: #FFF;
+            height: 300px;
+            width: 100%;
+            border-radius: 10px;
+            position: relative;
+        }
+        label{
+            color: #000;
+            font-weight: bold;
+            font-size: 20px;
+            margin-left: 40px;
+        }
+        input{
+            text-align: left;
+            margin: 10px;
+        }
+        .input{
+            width: 80%;
+            height: 35px;
+            margin-left: 40px;
+        }
+        .checkbox{
+            margin-left: 30px;
+        }
+        a{
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .submit{
+            display: inline-block;
+            margin-top: 0;
+            margin-left:145px;
+            background: #000;
+            border: none;
+            color: #FFF;
+            height: 35px;
+            width: 100px;
+            text-align: center;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+        .left{
+            margin: 20px;
+        }
+        .right{
+            position: absolute;
+            right: 20px;
+        }
+    </style>
+</head>
+ 
+<body>
+    <div class="container">
+        <h1>用户登录</h1>
+        <form>
+            <br>
+            <label for="username">用户名</label><br>
+            <input type="text" name="username" id="username" class="input" value="" placeholder="用户名admin"><br>
+            <label for="pwd">密码</label><br>
+            <input type="password" name="" id="pwd" class="input" value="" placeholder="密码admin">
+            <div class="checkbox">
+                <input type="checkbox" name="">
+                <span>记住密码</span>
+            </div>
+            <button type="submit" class="submit" onclick="submits(this)">开始登录</button>
+            <br>
+            <a href="index.html" class="left">返回首页</a>
+            <a href="register.html" class="right">注册账号</a>
+        </form>
+    </div>
+    <script>
+     function submits(btn){
+        var userName = document.getElementById("username").value;
+        var pwd = document.getElementById("pwd").value;
+        console.log(userName)
+        if (userName == "admin" && pwd == "admin") {
+           alert("用户名和密码正确，但是连接服务器失败！")
+        }
+        else {
+            alert("用户名或密码不正确！");
+        }
+    };
+    </script>
+</body>
+ 
+</html>
